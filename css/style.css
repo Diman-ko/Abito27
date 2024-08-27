@@ -1,0 +1,169 @@
+/* Указываем box sizing */
+html {
+    box-sizing: border-box;
+    background: #FFFFFF;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: #666666;
+    text-decoration: none;
+}
+
+/* Убираем внутренние отступы */
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class],
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    padding: 0;
+    margin: 0;
+}
+
+
+.btn-reset {
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Global
+*/
+.flex {
+    display: flex;
+}
+
+/* Body */
+
+.search-block {
+    color: red;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    padding: 0 12px;
+    /*border: 1px solid #000;*/
+    margin: 0 auto;
+
+}
+
+
+/* header */
+.header {
+padding-top: 30px;
+padding-bottom: 24px;
+}
+
+.header-box {
+border: 1px solid #666666;
+justify-content: space-between;
+}
+
+.header-box__logo {
+justify-content: flex-start;
+align-items: center;
+}
+
+.header-logo-txt {
+color: rgb(10, 20, 58);
+/*font-family: Roboto;*/
+line-height: 28px;
+font-size: 24px;
+font-weight: 700;
+margin-left: 6px;
+}
+
+.header-box__btn {
+font-size: 14px;
+font-weight: 400;
+line-height: 16px;
+padding: 10px 15px;
+text-align: left;
+cursor: pointer;
+background: transparent;
+}
+
+.header-box__btn1 {
+border-radius: 5px;
+background: rgb(37, 110, 235);
+color: rgb(255, 255, 255);
+}
+
+.header-burger {
+width: 30px;
+height: 19px;
+display: none;
+}
+
+
